@@ -4,6 +4,22 @@
 
 基本功能已完善，鸽几天，有问题先仔细看此README。
 
+## 说明
+
+因为后续qinglong将存储目录放到了/ql/data下，需要配置
+```js
+QL_DIR = /ql/data
+```
+但是不知道为什么，在docker中读取 process.env.QL_DIR 错误
+因此 直接指定死了路径
+```js
+ql.js
+user.js
+
+// const qlDir = process.env.QL_DIR || '/ql';
+const qlDir = '/ql/data';
+```
+
 ## 致谢
 
 感谢Ninja原作者：@MoonBegonia
