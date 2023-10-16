@@ -6,6 +6,8 @@
 
 ## 说明
 
+做了部分修改，适配适配qinglongv2.16.3
+
 因为后续qinglong将存储目录放到了/ql/data下，需要配置
 ```js
 QL_DIR = /ql/data
@@ -19,6 +21,8 @@ user.js
 // const qlDir = process.env.QL_DIR || '/ql';
 const qlDir = '/ql/data';
 ```
+
+> 在创建docker的compose文件里，没有指定environment 的QL_DIR 值，导致默认目录为/ql。所以在node的process.env.QL_DIR值一直是/ql
 
 ## 致谢
 
